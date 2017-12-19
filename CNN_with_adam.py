@@ -122,6 +122,7 @@ class NASoptim(Optimizer):
 
         return loss
 cnn = CNN()
+#cnn.cuda()
 print(cnn)
 
 # Step 3: Loss Funtion
@@ -136,6 +137,7 @@ optimizer = torch.optim.Adam(cnn.parameters(), lr=LR)
 for epoch in range(EPOCH):  # loop over the dataset multiple times
     for i, (x,y) in enumerate(train_loader):
         x, y = Variable(x), Variable(y)
+        #x, y = Variable(x.cuda()), Variable(y.cuda())
 
         yhat = cnn(x)
         loss = loss_func(yhat, y)    # cross entropy loss
