@@ -163,7 +163,7 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
         total = y.size(0)
         correct = (y_pred == y.cuda()).sum()
     writer.add_scalar('accuracy', (100 * correct / total), i)
-    print('Test accuracy: %.2f %%' % (100 * correct / total))`
+    print('Test accuracy: %.2f %%' % (100 * correct / total))
 
 writer.export_scalars_to_json("./all_scalars.json")
 
