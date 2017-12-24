@@ -16,14 +16,14 @@ python CNN_with_NASoptim.py
 | ------------- | ------------- |
 | SGD           | 37.0%         |
 | Adam          | 62.0%         |
-| NASOptimiser  | <b>75.0%</b>  |
+| PowerSign     | <b>75.0%</b>  |
 
 ## 300 Epochs
 | Optimiser     | Test Accuracy |
 | ------------- | ------------- |
 | SGD           | 60.0%         |
 | Adam          | <b>62.0%</b>  |
-| NASOptimiser  | 50.0%         | 
+| PowerSign     | 50.0%         | 
 
 This suggest the optimiser quickly overfits 
 the CNN as early stopping improves the perofrmace 
