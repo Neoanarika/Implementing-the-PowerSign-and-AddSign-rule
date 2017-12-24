@@ -23,7 +23,9 @@ python CNN_with_NASoptim.py
 | ------------- | ------------- |
 | SGD           | 60.0%         |
 | Adam          | <b>62.0%</b>  |
-| PowerSign     | 50.0%         | 
+| PowerSign     | 50.0%         |
+| AddSign       | 56.0%         |
+
 
 This suggest the optimiser quickly overfits 
 the CNN as early stopping improves the perofrmace 
