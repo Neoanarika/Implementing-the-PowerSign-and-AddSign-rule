@@ -3,12 +3,32 @@
 Implementing the update learning rule found in Neural Optimizer search with Reinforcement learning. 
 
 # How to use 
-```python CNN_with_NASoptim.py ```
+```
+python CNN_with_NASoptim.py 
+```
+
+# Perliminary Results 
+
+## 160 Epochs 
+| Optimiser     | Test Accuracy |
+| ------------- | ------------- |
+| SGD           | 37.0%         |
+| Adam          | 62.0%         |
+| NASOptimiser  | 75.0%         |
+
+## 300 Epochs
+| Optimiser     | Test Accuracy |
+| ------------- | ------------- |
+| SGD           | 60.0%         |
+| Adam          | 62.0%         |
+| NASOptimiser  | 50.0%         | 
 
 # Dependecies 
 ```
-Python 3
-Pytorch
+1. Python 3
+2. Pytorch 
 ```
+
+Make sure that the Pytorch can support GPU. 
 
 Working on a tensorflow implementation soon
