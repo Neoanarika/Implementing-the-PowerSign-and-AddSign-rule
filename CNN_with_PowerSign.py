@@ -142,8 +142,7 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
 
         yhat = cnn(x)
         loss = loss_func(yhat, y)    # cross entropy loss
-        writer.add_scalar('loss', loss.data[0], i)
-
+         
         optimizer.zero_grad()            # clear gradients for this training step
         loss.backward()                  # backpropagation, compute gradients
         optimizer.step()                 # apply gradients

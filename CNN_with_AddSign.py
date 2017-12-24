@@ -136,13 +136,12 @@ loss_func = nn.CrossEntropyLoss()
 optimizer = AddSign(cnn.parameters(), lr=LR)
 
 #Step 5: Training Loop
-for epoch in range(EPOCH):  # loop over the dataset multiple times
+or epoch in range(EPOCH):  # loop over the dataset multiple times
     for i, (x,y) in enumerate(train_loader):
         x, y = Variable(x.cuda()), Variable(y.cuda())
 
         yhat = cnn(x)
         loss = loss_func(yhat, y)    # cross entropy loss
-        writer.add_scalar('loss', loss.data[0], i)
 
         optimizer.zero_grad()            # clear gradients for this training step
         loss.backward()                  # backpropagation, compute gradients
@@ -151,19 +150,19 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
         _,y_pred = torch.max(yhat.data, 1)
         total = y.size(0)
         correct = (y_pred == y.data).sum()
-        writer.add_scalar('accuracy', (100 * correct / total), i)
         if i % 10 == 0:
             print('Epoch/Step: {}/{}'.format(epoch+1,i),
                 '| train loss: %.4f' % loss.data[0],
                 '| accuracy: %.2f %%' % (100 * correct / total))
 
-#Step 6: Evaluation
-for (x,y) in test_loader:
-    yhat = cnn(Variable(x).cuda())
-    _, y_pred = torch.max(yhat.data, 1)
-    total = y.size(0)
-    correct = (y_pred == y.cuda()).sum()
-print('Test accuracy: %.2f %%' % (100 * correct / total))
+    #Step 6: Evaluation
+    for (x,y) in test_loader:
+        yhat = cnn(Variable(x).cuda())
+        _, y_pred = torch.max(yhat.data, 1)
+        total = y.size(0)
+        correct = (y_pred == y.cuda()).sum()
+    writer.add_scalar('Test accuracy', (100 * correct / total),epoch)
+    print('Test accuracy: %.2f %%' % (100 * correct / total))
 
 writer.export_scalars_to_json("./all_scalars.json")
 
