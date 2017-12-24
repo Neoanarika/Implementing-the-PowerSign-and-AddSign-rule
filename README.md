@@ -16,6 +16,7 @@ python CNN_with_NASoptim.py
 | SGD           | 37.0%         |
 | Adam          | 62.0%         |
 | PowerSign     | <b>75.0%</b>  |
+| AddSign       | 50.0%         |
 
 ## 300 Epochs
 | Optimiser     | Test Accuracy |
