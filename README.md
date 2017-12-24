@@ -26,13 +26,12 @@ python CNN_with_NASoptim.py
 | PowerSign     | 50.0%         |
 | AddSign       | 56.0%         |
 
+Both PowerSign and AddSign have high training accuracy but much lower test accuracy, which suggest Overfitting is a common problem in update rules found by the Algorthim. 
 
-This suggest the optimiser quickly overfits 
-the CNN as early stopping improves the perofrmace 
-of the model. 
+By using halfing the number of epochs we were able to reduce overfitting in PowerSign, this suggest early stopping is a good strategy to manage overfitting for PowerSign and possibly even for AddSign. 
 
 The next step will be to visualise the learning on
-tensorboard while running 500 epochs. 
+tensorboard while running 500 epochs.  
 
 # Dependecies 
 ```
