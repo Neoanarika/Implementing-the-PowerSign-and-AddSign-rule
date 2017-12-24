@@ -64,7 +64,7 @@ class CNN(nn.Module):
         x = self.fc3(x)
         return x
 
-class NASoptim(Optimizer):
+class AddSign(Optimizer):
     def __init__(self, params, lr=0.001, momentum=0.9, dampening=0,
                  weight_decay=0, nesterov=False):
         defaults = dict(lr=lr, momentum=momentum, dampening=dampening,
@@ -116,7 +116,7 @@ class NASoptim(Optimizer):
                         d_p = d_p.add(momentum, buf)
                     else:
                         #This is the gradient update rule that was found in the paper Neural Optimizer search with reinfrocmement learning
-                        d_p = torch.mul(torch.exp(torch.mul(d_p.sign(),buf.sign())),d_p)
+                        d_p = torch.mul(tf.add(1,torch.mul(d_p.sign(),buf.sign())),d_p)
                         #print(d_p)
                         #d_p = buf
 
@@ -133,7 +133,7 @@ loss_func = nn.CrossEntropyLoss()
 #Step 4: Optimizer
 #optimizer = torch.optim.Adam(cnn.parameters(), lr=LR)
 #optimizer = torch.optim.sgd(cnn.parameters(), lr=LR)
-optimizer = NASoptim(cnn.parameters(), lr=LR)
+optimizer = AddSign(cnn.parameters(), lr=LR)
 
 #Step 5: Training Loop
 for epoch in range(EPOCH):  # loop over the dataset multiple times
