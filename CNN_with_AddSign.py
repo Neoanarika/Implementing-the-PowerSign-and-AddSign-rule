@@ -74,7 +74,7 @@ class AddSign(Optimizer):
         super(NASoptim, self).__init__(params, defaults)
 
     def __setstate__(self, state):
-        super(NASoptim, self).__setstate__(state)
+        super(AddSign, self).__setstate__(state)
         for group in self.param_groups:
             group.setdefault('nesterov', False)
 
