@@ -13,9 +13,10 @@ from torch.optim import Optimizer
 from tensorboardX import SummaryWriter
 # Step 1: Setup
 torch.manual_seed(1)
+writer = SummaryWriter()
 
 # Hyper Parameters
-EPOCH = 2
+EPOCH = 25
 BATCH_SIZE = 128
 LR = 0.1
 
