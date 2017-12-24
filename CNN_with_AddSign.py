@@ -71,7 +71,7 @@ class AddSign(Optimizer):
                         weight_decay=weight_decay, nesterov=nesterov)
         if nesterov and (momentum <= 0 or dampening != 0):
             raise ValueError("Nesterov momentum requires a momentum and zero dampening")
-        super(NASoptim, self).__init__(params, defaults)
+        super(AddSign, self).__init__(params, defaults)
 
     def __setstate__(self, state):
         super(AddSign, self).__setstate__(state)
