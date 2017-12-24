@@ -10,8 +10,10 @@ from torch.autograd import Variable
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.optim import Optimizer
+from tensorboardX import SummaryWriter
 # Step 1: Setup
 torch.manual_seed(1)
+writer = SummaryWriter()
 
 # Hyper Parameters
 EPOCH = 2
@@ -141,6 +143,7 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
 
         yhat = cnn(x)
         loss = loss_func(yhat, y)    # cross entropy loss
+        writer.add_scalar('loss', loss.data[0], i)
 
         optimizer.zero_grad()            # clear gradients for this training step
         loss.backward()                  # backpropagation, compute gradients
@@ -149,6 +152,7 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
         _,y_pred = torch.max(yhat.data, 1)
         total = y.size(0)
         correct = (y_pred == y.data).sum()
+        writer.add_scalar('accuracy', (100 * correct / total), i)
         if i % 10 == 0:
             print('Epoch/Step: {}/{}'.format(epoch+1,i),
                 '| train loss: %.4f' % loss.data[0],
@@ -161,3 +165,7 @@ for (x,y) in test_loader:
     total = y.size(0)
     correct = (y_pred == y.cuda()).sum()
 print('Test accuracy: %.2f %%' % (100 * correct / total))
+
+writer.export_scalars_to_json("./all_scalars.json")
+
+writer.close()
