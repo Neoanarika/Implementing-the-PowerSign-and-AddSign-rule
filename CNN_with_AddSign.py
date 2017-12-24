@@ -116,7 +116,7 @@ class AddSign(Optimizer):
                         d_p = d_p.add(momentum, buf)
                     else:
                         #This is the gradient update rule that was found in the paper Neural Optimizer search with reinfrocmement learning
-                        d_p = torch.mul(torch.add(1,torch.mul(d_p.sign(),buf.sign())),d_p)
+                        d_p = torch.mul(torch.add(1.cuda(),torch.mul(d_p.sign(),buf.sign())),d_p)
                         #print(d_p)
                         #d_p = buf
 
