@@ -105,7 +105,7 @@ class NASoptim(Optimizer):
                 if momentum != 0:
                     param_state = self.state[p]
                     if 'momentum_buffer' not in param_state:
-                        buf = param_state['momentum_buffer'] = torch.zeros(p.data.size())
+                        buf = param_state['momentum_buffer'] = torch.zeros(p.data.size()).cuda()
                         buf = buf.mul(momentum).add(d_p)
                     else:
                         buf = param_state['momentum_buffer']
@@ -130,8 +130,8 @@ loss_func = nn.CrossEntropyLoss()
 
 #Step 4: Optimizer
 #optimizer = torch.optim.Adam(cnn.parameters(), lr=LR)
-#optimizer = torch.optim.SGD(cnn.parameters(), lr=LR)
-optimizer = NASoptim(cnn.parameters(), lr=LR)
+optimizer = torch.optim.SGD(cnn.parameters(), lr=LR)
+#optimizer = NASoptim(cnn.parameters(), lr=LR)
 
 #Step 5: Training Loop
 for epoch in range(EPOCH):  # loop over the dataset multiple times
@@ -156,8 +156,8 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
 
 #Step 6: Evaluation
 for (x,y) in test_loader:
-    yhat = cnn(Variable(x))
+    yhat = cnn(Variable(x).cuda())
     _, y_pred = torch.max(yhat.data, 1)
     total = y.size(0)
-    correct = (y_pred == y).sum()
+    correct = (y_pred == y.cuda()).sum()
 print('Test accuracy: %.2f %%' % (100 * correct / total))
