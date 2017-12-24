@@ -1,6 +1,8 @@
-# NASoptimser
+# PowerSign Rule
 
-Implementing the update learning rule found in Neural Optimizer search with Reinforcement learning. 
+The PowerSign update rule is a gradient 
+update rule found by Quoc V. Le team and was 
+reported in their paper "Neural Optimiser search with Reinforcment learning" 
 
 # How to use 
 ```
