@@ -20,7 +20,7 @@ python CNN_with_NASoptim.py
 | Optimiser     | Test Accuracy |
 | ------------- | ------------- |
 | SGD           | 60.0%         |
-| Adam          | <b>62.0%</b   |
+| Adam          | <b>62.0%</b>  |
 | NASOptimiser  | 50.0%         | 
 
 # Dependecies 
