@@ -18,7 +18,7 @@ writer = SummaryWriter()
 # Hyper Parameters
 EPOCH = 300
 BATCH_SIZE = 128
-LR = 0.1
+LR = 0.001
 
 train_data = torchvision.datasets.CIFAR10(
     root='./cifar10',
