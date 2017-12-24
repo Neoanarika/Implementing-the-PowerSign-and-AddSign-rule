@@ -23,6 +23,13 @@ python CNN_with_NASoptim.py
 | Adam          | <b>62.0%</b>  |
 | NASOptimiser  | 50.0%         | 
 
+This suggest the optimiser quickly overfits 
+the CNN as early stopping improves the perofrmace 
+of the model. 
+
+The next step will be to visualise the learning on
+tensorboard while running 500 epochs. 
+
 # Dependecies 
 ```
 1. Python 3
