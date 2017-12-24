@@ -16,7 +16,7 @@ torch.manual_seed(1)
 writer = SummaryWriter()
 
 # Hyper Parameters
-EPOCH = 300
+EPOCH = 160
 BATCH_SIZE = 128
 LR = 0.01
 
@@ -136,7 +136,7 @@ loss_func = nn.CrossEntropyLoss()
 optimizer = AddSign(cnn.parameters(), lr=LR)
 
 #Step 5: Training Loop
-or epoch in range(EPOCH):  # loop over the dataset multiple times
+for epoch in range(EPOCH):  # loop over the dataset multiple times
     for i, (x,y) in enumerate(train_loader):
         x, y = Variable(x.cuda()), Variable(y.cuda())
 
