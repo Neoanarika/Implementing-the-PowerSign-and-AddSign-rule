@@ -108,7 +108,7 @@ class NASoptim(Optimizer):
                     param_state = self.state[p]
                     if 'momentum_buffer' not in param_state:
                         buf = param_state['momentum_buffer'] = torch.zeros(p.data.size()).cuda()
-                        buf = buf.mul(momentum).add(d_p.mul(1-momentum))
+                        buf = tf.add(buf.mul(momentum),(d_p.mul(1-momentum)))
                     else:
                         buf = param_state['momentum_buffer']
                         buf = buf.mul(momentum).add(1 - dampening, d_p)
