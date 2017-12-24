@@ -10,12 +10,14 @@ from torch.autograd import Variable
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.optim import Optimizer
+from tensorboardX import SummaryWriter
+
 # Step 1: Setup
 torch.manual_seed(1)
 writer = SummaryWriter()
 
 # Hyper Parameters
-EPOCH = 2
+EPOCH = 300
 BATCH_SIZE = 128
 LR = 0.001
 
