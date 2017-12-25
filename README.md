@@ -13,20 +13,10 @@ python CNN_with_NASoptim.py
 ## 160 Epochs 
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs.png)
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs%20legend.png)
-| Optimiser     | Test Accuracy |
-| ------------- | ------------- |
-| SGD           | 37.0%         |
-| Adam          | 62.0%         |
-| PowerSign     | <b>75.0%</b>  |
-| AddSign       | 50.0%         |
 
 ## 300 Epochs
-| Optimiser     | Test Accuracy |
-| ------------- | ------------- |
-| SGD           | 60.0%         |
-| Adam          | <b>62.0%</b>  |
-| PowerSign     | 50.0%         |
-| AddSign       | 56.0%         |
+![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/300%20epochs.png)
+![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/300%20epcohs%20time.png)
 
 Both PowerSign and AddSign have high training accuracy but much lower test accuracy, which suggest Overfitting is a common problem in update rules found by the Algorthim. 
 
