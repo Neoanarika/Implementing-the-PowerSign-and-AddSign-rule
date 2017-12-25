@@ -12,27 +12,26 @@ python CNN_with_NASoptim.py
 
 ## 160 Epochs 
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs.png)
-| Optimiser     | Test Accuracy |
+
+
+| Optimiser     | Colour        |
 | ------------- | ------------- |
-| SGD           | 37.0%         |
-| Adam          | 62.0%         |
-| PowerSign     | <b>75.0%</b>  |
-| AddSign       | 50.0%         |
+| SGD           | Sky Blue      |
+| Adam          | Red           |
+| PowerSign     | Dark Blue     |
+| AddSign       | Orange        |
 
 ## 300 Epochs
-| Optimiser     | Test Accuracy |
-| ------------- | ------------- |
-| SGD           | 60.0%         |
-| Adam          | <b>62.0%</b>  |
-| PowerSign     | 50.0%         |
-| AddSign       | 56.0%         |
+![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/300%20epochs.png)
+![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/300%20epcohs%20time.png)
 
 Both PowerSign and AddSign have high training accuracy but much lower test accuracy, which suggest Overfitting is a common problem in update rules found by the Algorthim. 
 
 By halfing the number of epochs we were able to reduce overfitting in PowerSign, this suggest early stopping is a good strategy to manage overfitting for PowerSign and possibly even for AddSign. 
 
-The next step will be to visualise the learning on
-tensorboard while running 500 epochs.  
+## Conclusion 
+
+We manage to get a similar graph that Quoc v. Le's team reported in their paper and provide a pytorch implementation of their optimiser for others to use in their experiments. 
 
 # Dependecies 
 ```
