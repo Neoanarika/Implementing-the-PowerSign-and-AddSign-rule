@@ -11,8 +11,21 @@ reported in their paper "Neural Optimiser search with Reinforcment learning", wh
 
 # How to use 
 ```
-python CNN_with_AddSign.py 
-python CNN_with_PowerSign.py
+python Addsign.py 
+python Powersign.py
+```
+To use for your projects, copy the Addsign/Powersign file into ur project directory then import them respectively. 
+
+## Addsign
+```
+from Addsign import Addsign
+optimizer = AddSign(cnn.parameters(), lr=0.01)
+```
+
+## Powersign
+```
+from Powersign import Powersign
+optimizer = Powersign(cnn.parameters(), lr=0.01)
 ```
 
 # Results 
