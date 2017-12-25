@@ -35,6 +35,8 @@ Both PowerSign and AddSign have high training accuracy but much lower test accur
 
 By halfing the number of epochs we were able to reduce overfitting in PowerSign, this suggest early stopping is a good strategy to manage overfitting for PowerSign and possibly even for AddSign. 
 
+We also observe that eventually PowerSign and AddSign eventually converged to the same value, I think this is because of the model we tested them on rather than properties of the optimiser themselves. 
+
 ## Conclusion 
 
 We manage to get a similar graph that Quoc v. Le's team reported in their paper and provide a pytorch implementation of their optimiser for others to use in their experiments. 
