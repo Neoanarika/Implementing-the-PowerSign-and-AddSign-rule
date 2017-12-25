@@ -8,9 +8,10 @@ reported in their paper "Neural Optimiser search with Reinforcment learning", wh
 python CNN_with_NASoptim.py 
 ```
 
-# Perliminary Results 
+# Results 
 
 ## 160 Epochs 
+![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs.png)
 | Optimiser     | Test Accuracy |
 | ------------- | ------------- |
 | SGD           | 37.0%         |
