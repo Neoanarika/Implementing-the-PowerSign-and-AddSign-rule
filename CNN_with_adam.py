@@ -17,7 +17,7 @@ torch.manual_seed(1)
 writer = SummaryWriter()
 
 # Hyper Parameters
-EPOCH = 500
+EPOCH = 300
 BATCH_SIZE = 128
 LR = 0.001
 
