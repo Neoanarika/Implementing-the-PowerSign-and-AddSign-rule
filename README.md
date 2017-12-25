@@ -11,7 +11,8 @@ reported in their paper "Neural Optimiser search with Reinforcment learning", wh
 
 # How to use 
 ```
-python CNN_with_NASoptim.py 
+python CNN_with_AddSign.py 
+python CNN_with_PowerSign.py
 ```
 
 # Results 
