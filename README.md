@@ -74,3 +74,6 @@ Addsign and Powersign only has a single memory buffer comapred to adam double me
 Make sure that the Pytorch can support GPU. 
 
 Working on a tensorflow implementation soon
+
+# References 
+1. Bello, Irwan, Barret Zoph, Vijay Vasudevan, and Quoc V. Le. "Neural optimizer search with reinforcement learning." arXiv preprint arXiv:1709.07417 (2017).
