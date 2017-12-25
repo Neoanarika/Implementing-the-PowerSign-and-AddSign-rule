@@ -16,7 +16,7 @@ torch.manual_seed(1)
 writer = SummaryWriter()
 
 # Hyper Parameters
-EPOCH = 160
+EPOCH = 500
 BATCH_SIZE = 128
 LR = 0.01
 
@@ -142,7 +142,7 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
 
         yhat = cnn(x)
         loss = loss_func(yhat, y)    # cross entropy loss
-         
+
         optimizer.zero_grad()            # clear gradients for this training step
         loss.backward()                  # backpropagation, compute gradients
         optimizer.step()                 # apply gradients
