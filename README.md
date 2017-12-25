@@ -69,6 +69,7 @@ Addsign and Powersign only has a single memory buffer comapred to adam double me
 ```
 1. Python 3
 2. Pytorch 
+3. tensorboardX # To allow pytorch to use tensorboard
 ```
 
 Make sure that the Pytorch can support GPU. 
