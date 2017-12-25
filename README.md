@@ -61,6 +61,10 @@ We manage to get a similar graph that Quoc v. Le's team reported in their paper 
 ### Our Results on small CNN
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/300%20epcohs%20all.png)
 
+## Adavantages to using Addsign and Powersign over adam
+
+Addsign and Powersign only has a single memory buffer comapred to adam double memory buffer, hence it is more memory effective although it can yield similar or better result than adam. 
+
 # Dependecies 
 ```
 1. Python 3
