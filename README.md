@@ -12,6 +12,8 @@ python CNN_with_NASoptim.py
 
 ## 160 Epochs 
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs.png)
+
+
 | Optimiser     | Colour        |
 | ------------- | ------------- |
 | SGD           | Sky Blue      |
