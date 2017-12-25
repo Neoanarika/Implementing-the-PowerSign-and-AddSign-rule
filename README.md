@@ -12,6 +12,7 @@ python CNN_with_NASoptim.py
 
 ## 160 Epochs 
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs.png)
+![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/160%20epochs%20legend.png)
 | Optimiser     | Test Accuracy |
 | ------------- | ------------- |
 | SGD           | 37.0%         |
