@@ -136,7 +136,7 @@ optimizer = torch.optim.SGD(cnn.parameters(), lr=LR)
 #optimizer = NASoptim(cnn.parameters(), lr=LR)
 
 #Step 5: Training Loop
-or epoch in range(EPOCH):  # loop over the dataset multiple times
+for epoch in range(EPOCH):  # loop over the dataset multiple times
     for i, (x,y) in enumerate(train_loader):
         x, y = Variable(x.cuda()), Variable(y.cuda())
 

@@ -137,7 +137,7 @@ optimizer = torch.optim.Adam(cnn.parameters(), lr=LR)
 #optimizer = NASoptim(cnn.parameters(), lr=LR)
 
 #Step 5: Training Loop
-or epoch in range(EPOCH):  # loop over the dataset multiple times
+for epoch in range(EPOCH):  # loop over the dataset multiple times
     for i, (x,y) in enumerate(train_loader):
         x, y = Variable(x.cuda()), Variable(y.cuda())
 
@@ -164,7 +164,7 @@ or epoch in range(EPOCH):  # loop over the dataset multiple times
         correct = (y_pred == y.cuda()).sum()
     writer.add_scalar('Test accuracy', (100 * correct / total),epoch)
     print('Test accuracy: %.2f %%' % (100 * correct / total))
-    
+
 writer.export_scalars_to_json("./all_scalars.json")
 
 writer.close()
