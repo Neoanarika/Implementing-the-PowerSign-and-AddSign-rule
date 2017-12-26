@@ -58,6 +58,8 @@ We manage to get a similar graph that Quoc v. Le's team reported in their paper 
 ### Original Results on small CNN
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/original.png)
 
+The original results initally called Powersign as Optimiser_1. 
+
 ### Our Results on small CNN
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/300%20epcohs%20all.png)
 
