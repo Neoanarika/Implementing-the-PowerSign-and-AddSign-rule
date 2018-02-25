@@ -1,7 +1,9 @@
 # Implementing the PowerSign and AddSign rule
 The PowerSign and AddSign update rule are a gradient 
 update rules found by Quoc V. Le's team and was 
-reported in their paper "Neural Optimiser search with Reinforcment learning", which claimed that the optimiser found by their algorthim is better than adam and SGD for training neural networks. This repo tries to replicate their experiment for small CNNs in pytorch. I nickname my implementation of the PowerSign Rule NASoptimiser which stands for Neural Architectural Search optimiser. 
+reported in their paper "Neural Optimiser search with Reinforcment learning", which claimed that the optimiser found by their algorthim is better than adam and SGD for training neural networks. This repo tries to replicate their experiment for small CNNs in pytorch. 
+
+Update : Tensorflow implementation added as of 25 Feb 2018 for tensorflow 1.5.
 
 ## AddSign 
 ![alt text](https://github.com/Neoanarika/Implementing-the-PowerSign-and-AddSign-rule/blob/master/img/addsign.png)
